@@ -29,6 +29,15 @@ public class SampleFragmentActivity extends FragmentActivity {
                         .beginTransaction();
 
                 Fragment1 fragment = new Fragment1();
+                fragmentTransaction.setCustomAnimations(
+                        R.anim.fragment_slide_right_enter,
+                        R.anim.fragment_slide_left_exit);
+//                fragmentTransaction.setCustomAnimations(
+//                        R.anim.fragment_slide_right_enter,
+//                        R.anim.fragment_slide_left_exit,
+//                        R.anim.fragment_slide_left_enter,
+//                        R.anim.fragment_slide_right_exit);
+                
                 Bundle bundle = new Bundle();
                 bundle.putInt("cnt", cnt++);
                 fragment.setArguments(bundle);
