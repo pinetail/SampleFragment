@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <include layout="@layout/header" android:layout_width="wrap_content" android:id="@+id/include1" android:layout_height="wrap_content"></include>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout3"
+        android:layout_weight="1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/linearLayout1">
+            <Button
+                android:id="@+id/btn_prev"
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></Button>
+        </LinearLayout>
+        <fragment
+            android:name="jp.pinetail.android.sample.fragment.Fragment1"
+            android:id="@+id/fragment1"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"></fragment>
+        <fragment
+            android:name="jp.pinetail.android.sample.fragment.Fragment2"
+            android:id="@+id/fragment2"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"></fragment>
+    </LinearLayout>
+</LinearLayout>
